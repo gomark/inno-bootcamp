@@ -30,5 +30,8 @@ steps:
   - 'apply'
   - '-f'
   - 'configmap-mymap.yaml'
+  env:
+    - 'CLOUDSDK_COMPUTE_REGION=${_CLOUDSDK_COMPUTE_REGION}'
+    - 'CLOUDSDK_CONTAINER_CLUSTER=${_CLOUDSDK_CONTAINER_CLUSTER}'  
   
 images: ['gcr.io/$PROJECT_ID/main-app:$COMMIT_SHA']
