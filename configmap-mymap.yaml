@@ -7,4 +7,4 @@ data:
   key1: value100
   key2: value2
   redis_host: 10.190.254.27
-  redis_port: 6379
+  redis_port: "6379"
