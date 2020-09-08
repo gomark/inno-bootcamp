@@ -3,7 +3,7 @@ var express = require('express'),
   port = process.env.PORT || 3000;
 
 
-// Test xx xx xx
+// Test xx xx xx yy
 app.listen(port);
 
 console.log('todo list RESTful API server startedd on: ' + port);
