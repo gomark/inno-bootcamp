@@ -29,15 +29,26 @@ REDIS_HOST = process.env.redis_host;
 const redis = require("redis");
 const client = redis.createClient(REDIS_PORT, REDIS_HOST);
 
+function getCacheById(key) {
+  return new Promise((resv, rej) => {
+    client.get(key, (err, reply) => {
+      resv(reply);
+    });
+  })
+  
+}
+
 client.on("error", function(error) {
   console.error(error);
 });
 
 app.get("/test-redis", (req, res, next) => {
   console.log('/test-redis');
-  client.set("key", "value", redis.print);
+  client.set("key", "set-value", redis.print);
   key = client.get("key", redis.print);
-  res.status(200).send('key=' + key);
+  getCacheById("key").then(function(result) {
+    res.status(200).send(result);
+  });
     
 });
 
