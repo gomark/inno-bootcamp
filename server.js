@@ -13,9 +13,9 @@ app.get("/", (req, res, next) => {
   res.status(200).send('hello world from main-app');
 });
 
-app.get("/node03", (req, res, next) => {
+app.get("/key1", (req, res, next) => {
   console.log("/node03");
-  res.status(200).send('login.OK.OK.new.version.node03');
+  res.status(200).send('key1=' + process.env.KEY1);
 });
 
 app.get("/health", (req, res, next) => {
