@@ -24,5 +24,11 @@ steps:
   env:
   - 'CLOUDSDK_COMPUTE_REGION=${_CLOUDSDK_COMPUTE_REGION}'
   - 'CLOUDSDK_CONTAINER_CLUSTER=${_CLOUDSDK_CONTAINER_CLUSTER}'
+
+- name: 'gcr.io/cloud-builders/kubectl'
+  args:
+  - 'apply'
+  - '-f'
+  - 'configmap-mymap.yaml'
   
 images: ['gcr.io/$PROJECT_ID/main-app:$COMMIT_SHA']
