@@ -18,7 +18,7 @@ steps:
   - 'image'
   - 'deployment'
   - '${_DEPLOYMENT_NAME}'
-  - '${_POD_SPEC}=gcr.io/$PROJECT_ID/node03:$COMMIT_SHA'
+  - '${_POD_SPEC}=gcr.io/$PROJECT_ID/main-app:$COMMIT_SHA'
   - '--namespace'
   - 'inno'
   env:

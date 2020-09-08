@@ -10,7 +10,7 @@ console.log('todo list RESTful API server startedd on: ' + port);
 
 app.get("/", (req, res, next) => {
   console.log("/ -- node03");
-  res.status(200).send('OK.OK.OK.');
+  res.status(200).send('hello world from main-app');
 });
 
 app.get("/node03", (req, res, next) => {
