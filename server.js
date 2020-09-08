@@ -15,7 +15,7 @@ app.get("/", (req, res, next) => {
 
 app.get("/key1", (req, res, next) => {
   console.log("/node03");
-  res.status(200).send('key1=' + process.env.KEY1);
+  res.status(200).send('key1=' + process.env.key1);
 });
 
 app.get("/health", (req, res, next) => {
