@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "gcp-container-builder": "^0.1.0"
+    "gcp-container-builder": "^0.1.0",
+    "redis": "^3.0.2"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
