@@ -4,5 +4,5 @@ metadata:
   name: mymap
   namespace: inno
 data:
-  key1: value1
+  key1: value100
   key2: value2
