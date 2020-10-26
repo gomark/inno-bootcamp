@@ -20,7 +20,7 @@ app.get("/key1", (req, res, next) => {
 
 app.get("/liveness", (req, res, next) => {
   console.log("log /liveness");
-  res.status(200).send('log /health of main-app');
+  res.status(200).send('log /liveness of main-app');
 });
 
 app.get("/health", (req, res, next) => {
@@ -30,6 +30,9 @@ app.get("/health", (req, res, next) => {
 
 REDIS_PORT = process.env.redis_port;
 REDIS_HOST = process.env.redis_host;
+
+console.log("REDIS_PORT=" + REDIS_PORT);
+console.log("REDIS_HOST=" + REDIS_HOST);
 
 const redis = require("redis");
 const client = redis.createClient(REDIS_PORT, REDIS_HOST);
