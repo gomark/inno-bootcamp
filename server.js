@@ -18,6 +18,11 @@ app.get("/key1", (req, res, next) => {
   res.status(200).send('key1=' + process.env.key1);
 });
 
+app.get("/liveness", (req, res, next) => {
+  console.log("log /liveness");
+  res.status(200).send('log /health of main-app');
+});
+
 app.get("/health", (req, res, next) => {
   console.log("log /health");
   res.status(200).send('log /health of main-app');
