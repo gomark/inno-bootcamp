@@ -9,7 +9,7 @@ app.listen(port);
 console.log('todo list RESTful API server startedd on: ' + port);
 
 app.get("/", (req, res, next) => {
-  console.log("/ -- hello world: main-app");
+  console.log("/ -- hello world: main-apps");
   res.status(200).send('hello world from main-app');
 });
 
