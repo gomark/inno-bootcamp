@@ -40,7 +40,7 @@ PROBE_LOG = parseInt(process.env.probe_log);
 
 console.log("REDIS_PORT=" + REDIS_PORT);
 console.log("REDIS_HOST=" + REDIS_HOST);
-console.log("REDIS_HOST=" + PROBE_LOG);
+console.log("PROBE_LOG=" + PROBE_LOG);
 
 
 if (PROBE_LOG != 0) {
