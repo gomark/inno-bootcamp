@@ -36,7 +36,7 @@ app.get("/health", (req, res, next) => {
 
 REDIS_PORT = process.env.redis_port;
 REDIS_HOST = process.env.redis_host;
-PROBE_LOG = process.env.probe_log;
+PROBE_LOG = parseInt(process.env.probe_log);
 
 console.log("REDIS_PORT=" + REDIS_PORT);
 console.log("REDIS_HOST=" + REDIS_HOST);
