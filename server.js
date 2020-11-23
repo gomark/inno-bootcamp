@@ -19,17 +19,24 @@ app.get("/key1", (req, res, next) => {
 });
 
 app.get("/liveness", (req, res, next) => {
-  console.log("log /liveness");
+  if (PROBE_LOG != 0) {
+    console.log("log /liveness");
+  }
+  
   res.status(200).send('log /liveness of main-app');
 });
 
 app.get("/health", (req, res, next) => {
-  console.log("log /health");
+  if (PROBE_LOG != 0) {
+    console.log("log /health");
+  }
+  
   res.status(200).send('log /health of main-app');
 });
 
 REDIS_PORT = process.env.redis_port;
 REDIS_HOST = process.env.redis_host;
+PROBE_LOG = process.env.probe_log;
 
 console.log("REDIS_PORT=" + REDIS_PORT);
 console.log("REDIS_HOST=" + REDIS_HOST);
