@@ -41,6 +41,12 @@ PROBE_LOG = process.env.probe_log;
 console.log("REDIS_PORT=" + REDIS_PORT);
 console.log("REDIS_HOST=" + REDIS_HOST);
 
+if (PROVE_LOG != 0) {
+  console.log("Probe log is ON");
+} else {
+  console.log("Probe log is OFF");
+}
+
 const redis = require("redis");
 const client = redis.createClient(REDIS_PORT, REDIS_HOST);
 
