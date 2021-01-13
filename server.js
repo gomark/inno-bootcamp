@@ -14,7 +14,7 @@ app.get("/main-app/123", (req, res, next) => {
 });
 
 app.get("/main-app2/123", (req, res, next) => {
-  console.log("/ -- hello world: main-app2/123");
+  console.log("/ -- hhello world: main-app2/123");
   res.status(200).send('hello world from /main-app2/123');
 });
 
