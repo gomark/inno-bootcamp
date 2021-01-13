@@ -22,7 +22,7 @@ app.get("/main-app/show_header", (req, res, next) => {
 	console.log(headerString);  
 });
 
-app.get("/main-app2/123", (req, res, next) => {
+app.get("/second-app/123", (req, res, next) => {
   console.log("/ -- hhello world: main-app2/123");
   res.status(200).send('hello world from /main-app2/123');
 });
