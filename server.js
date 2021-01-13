@@ -13,6 +13,11 @@ app.get("/main-app/123", (req, res, next) => {
   res.status(200).send('hello world from /main-app/123');
 });
 
+app.get("/main-app2/123", (req, res, next) => {
+  console.log("/ -- hello world: main-app2/123");
+  res.status(200).send('hello world from /main-app2/123');
+});
+
 app.get("/", (req, res, next) => {
   console.log("/ -- hello world: main-app");
   res.status(200).send('hello world from main-app');
