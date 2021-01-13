@@ -13,6 +13,15 @@ app.get("/main-app/123", (req, res, next) => {
   res.status(200).send('hello world from /main-app/123');
 });
 
+app.get("/main-app/show_header", (req, res, next) => {
+  console.log("/ main-app/show_header");
+  
+  var headerString = JSON.stringify(req.headers);
+  res.status(200).send(headerString);
+	
+	console.log(headerString);  
+});
+
 app.get("/main-app2/123", (req, res, next) => {
   console.log("/ -- hhello world: main-app2/123");
   res.status(200).send('hello world from /main-app2/123');
